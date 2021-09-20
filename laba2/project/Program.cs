@@ -71,6 +71,59 @@ namespace project {
             ss3.Remove(0, 2);
             ss3 = ss3.Insert(0, "m");
             ss3 = ss3.Insert(ss3.Length, "ie");
+
+            //массивы
+            int[,] numbers = new int[2, 3] { { 0, 1, 2 }, { 3, 4, 5 } };
+            int rows = numbers.GetUpperBound(0) + 1;
+            int columns = numbers.Length / rows;
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < columns; j++) {
+                    Console.Write($"{numbers[i, j]} \t");
+                }
+                Console.WriteLine();
+            }
+
+            string[] bykvi = new string[] { "a", "b", "c", "d", "e" };
+            for (int i = 0; i < bykvi.Length; i++) {
+                Console.Write(bykvi[i]);
+            }
+            Console.WriteLine();
+            int index = 2;
+            string third = "f";
+            for (int i = 0; i < bykvi.Length; i++) {
+                if (i == index) {
+                    bykvi[i] = third;
+                    Console.Write(bykvi[i]);
+                }
+                else Console.Write(bykvi[i]);
+            }
+            Console.WriteLine();
+
+            int[][] nums = new int[3][];
+            nums[0] = new int[2] { 1, 2 };
+            nums[1] = new int[3] { 1, 2, 3 };
+            nums[2] = new int[4] { 1, 2, 3, 4 };
+            int y = 0;
+            for (; y < 2; y++) {
+                Console.Write(nums[0][y] + "\t");
+            }
+            y = 0;
+            Console.WriteLine();
+            for (; y < 3; y++) {
+                Console.Write(nums[1][y] + "\t");
+            }
+            y = 0;
+            Console.WriteLine();
+            for (; y < 4; y++) {
+                Console.Write(nums[2][y] + "\t");
+            }
+            Console.WriteLine();
+
+            //int.Parse хорошая штука
+
+            //неявно типизированные переменные для хранения массива и строки
+            var array = new object[0];
+            var str = " ";
         }
     }
 }
