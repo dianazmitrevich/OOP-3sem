@@ -50,6 +50,27 @@ namespace project {
                 Console.WriteLine(nn.Value);
             else
                 Console.WriteLine("nn is equal to null");
+
+            //строки
+            string stroka1 = "hello ";
+            string stroka2 = "world";
+            string stroka3 = "!";
+            Console.WriteLine(String.Compare(stroka1, stroka2));
+
+            string stroka4 = String.Concat(stroka1, stroka2, stroka3); //соединение
+            string stroka5 = String.Copy(stroka3); //копирование
+            string[] strokas = stroka4.Split(' ');
+            string stroka6 = stroka1.Insert(6, stroka2);
+            string stroka7 = stroka1.Remove(4);
+
+            string ss1 = " ";
+            string ss2 = null;
+            Console.WriteLine(String.Compare(ss1, ss2));
+
+            StringBuilder ss3 = new StringBuilder("hello world!");
+            ss3.Remove(0, 2);
+            ss3 = ss3.Insert(0, "m");
+            ss3 = ss3.Insert(ss3.Length, "ie");
         }
     }
 }
