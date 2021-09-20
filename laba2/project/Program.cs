@@ -141,6 +141,23 @@ namespace project {
             var t2 = Tuple.Create(123, "Hello");
             Console.WriteLine(tl == t2); //здесь будет фолс
             Console.WriteLine(tl.Equals(t2)); //здесь будет тру
+
+            //5 задание
+            void loc(int[] mas, string strrr) {
+                int min = 0, max = 1000, sum = 0;
+                for (int g = 0; g < 6; g++) {
+                    if (mas[g] < min) min = mas[g];
+                    else max = mas[g];
+                    sum += mas[g];
+                }
+
+                char sym = strrr[0];
+                var t3 = Tuple.Create(max, min, sum, sym);
+                Console.WriteLine(t3);
+            }
+            int[] maas = { 0, 1, 2, 3, 4, 5};
+            string sttr = "abcdeg";
+            loc(maas, sttr);
         }
     }
 }
