@@ -124,6 +124,23 @@ namespace project {
             //неявно типизированные переменные для хранения массива и строки
             var array = new object[0];
             var str = " ";
+
+            //кортежи
+            var tuplle = Tuple.Create(123, "hello", 'w', "orld", 184467);
+
+            Console.WriteLine(tuplle.Item1);
+            Console.WriteLine(tuplle.Item2);
+            Console.WriteLine(tuplle.Item3);
+            Console.WriteLine(tuplle.Item4);
+            Console.WriteLine(tuplle.Item5);
+
+            (var aa, var bb) = ("123", 456);
+            Console.WriteLine($"{aa} {bb}"); //распаковка кортежа в переменные
+
+            var tl = Tuple.Create(123, "Hello");
+            var t2 = Tuple.Create(123, "Hello");
+            Console.WriteLine(tl == t2); //здесь будет фолс
+            Console.WriteLine(tl.Equals(t2)); //здесь будет тру
         }
     }
 }
