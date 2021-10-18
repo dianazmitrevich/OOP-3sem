@@ -22,7 +22,7 @@ namespace project {
             char s1 = 's';
             string s2 = "symbol";
             object abc = 'a';
-
+            
             //явное преобразование
             short p1 = (short)n5; //преобразование в 16-битное целое
             int p2 = (int)n9; //преобразование в целое число
@@ -45,7 +45,7 @@ namespace project {
             var peremennaya = "hello world"; //эквивалентно string peremennaya ...
 
             //nullable переменная
-            int? nn = null; //используется для работы, если мы не знаем имеет ли значение
+            int? nn = 5; //используется для работы, если мы не знаем имеет ли значение
             if (nn.HasValue)
                 Console.WriteLine(nn.Value);
             else
@@ -63,14 +63,14 @@ namespace project {
             string stroka6 = stroka1.Insert(6, stroka2);
             string stroka7 = stroka1.Remove(4);
 
-            string ss1 = " ";
+            string ss1 = "";
             string ss2 = null;
             Console.WriteLine(String.Compare(ss1, ss2));
 
             StringBuilder ss3 = new StringBuilder("hello world!");
             ss3.Remove(0, 2);
-            ss3 = ss3.Insert(0, "m");
-            ss3 = ss3.Insert(ss3.Length, "ie");
+            ss3.Insert(0, "m");
+            ss3.Insert(ss3.Length, "ie");
 
             //массивы
             int[,] numbers = new int[2, 3] { { 0, 1, 2 }, { 3, 4, 5 } };
@@ -158,6 +158,8 @@ namespace project {
             int[] maas = { 0, 1, 2, 3, 4, 5};
             string sttr = "abcdeg";
             loc(maas, sttr);
+
+            Console.ReadKey();
         }
     }
 }
