@@ -1,7 +1,0 @@
-C:\Users\diana\Desktop\oop\laba2\project\bin\Debug\project.exe.config
-C:\Users\diana\Desktop\oop\laba2\project\bin\Debug\project.exe
-C:\Users\diana\Desktop\oop\laba2\project\bin\Debug\project.pdb
-C:\Users\diana\Desktop\oop\laba2\project\obj\Debug\project.csprojAssemblyReference.cache
-C:\Users\diana\Desktop\oop\laba2\project\obj\Debug\project.csproj.CoreCompileInputs.cache
-C:\Users\diana\Desktop\oop\laba2\project\obj\Debug\project.exe
-C:\Users\diana\Desktop\oop\laba2\project\obj\Debug\project.pdb
