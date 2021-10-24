@@ -76,6 +76,7 @@ namespace ConsoleApp1
 
         private Phone(string surname, int cardNumber)
         {
+            Console.WriteLine("При создании этого экземпляра объекта был вызван приватный конструктор");
             this.surname = surname;
             this.nameData = (null, null);
             this.adress = null;
@@ -119,6 +120,16 @@ namespace ConsoleApp1
         {
             Phone privateConstructorCall = new Phone("Джианнис", 4267);
             Console.WriteLine("Всего существует {0} объект(ов) класса Phone", phoneCount);
+        }
+
+        public static Phone[] highUrbanTime(ref Phone[] array, int mins)
+        {
+            return array.Where(element => element.timeCount.urbanTime > mins).ToArray();
+        }
+
+        public static Phone[] useInternationalTime(ref Phone[] array)
+        {
+            return array.Where(element => element.timeCount.internationalTime > 0).ToArray();
         }
     }
 }
