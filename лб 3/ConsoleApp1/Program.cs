@@ -24,6 +24,19 @@ namespace ConsoleApp1
             Console.WriteLine("Абоненты, говорившие по международной связи:");
             foreach (Phone name in Phone.useInternationalTime(ref array)) Console.WriteLine(name.NameData);
 
+            Console.WriteLine("Адрес рандомного объекта {0}\n" +
+                "Сравнение объектов {1}\n" +
+                "Тип созданного объекта {2}", WarrenG.Adress, Diana.Equals(Yanis), Diana.GetType());
+
+            var anonym = new
+            {
+                id = 999,
+                surname = "anonym",
+                cardNumber = 3963,
+                timeCount = (23, 966)
+            };
+            Console.WriteLine(anonym);
+
             Console.ReadKey();
         }
     }
