@@ -74,7 +74,7 @@ namespace ConsoleApp1
             set => timeCount = value;
         }
 
-        private Phone (string surname, int cardNumber)
+        private Phone(string surname, int cardNumber)
         {
             this.surname = surname;
             this.nameData = (null, null);
@@ -82,6 +82,8 @@ namespace ConsoleApp1
             this.cardNumber = cardNumber;
             this.incomeOutcome = (0, 0);
             this.timeCount = (0, 0);
+
+            phoneCount++;
         }
 
         public Phone()
@@ -92,6 +94,8 @@ namespace ConsoleApp1
             this.cardNumber = null;
             this.incomeOutcome = (0, 0);
             this.timeCount = (0, 0);
+
+            phoneCount++;
         }
 
         public Phone(string surname = null, string name = null, string middleName = null, string adress = null, int? cardNumber = null, int income = 0, int outcome = 0, int urbanTime = 0, int internationalTime = 0)
@@ -102,11 +106,19 @@ namespace ConsoleApp1
             CardNumber = cardNumber;
             IncomeOutcome = (income, outcome);
             TimeCount = (urbanTime, internationalTime);
+
+            phoneCount++;
         }
 
         static Phone()
         {
             Console.WriteLine("Это статический конструктор!");
+        }
+
+        public static void showThePhoneCount()
+        {
+            Phone privateConstructorCall = new Phone("Джианнис", 4267);
+            Console.WriteLine("Всего существует {0} объект(ов) класса Phone", phoneCount);
         }
     }
 }
