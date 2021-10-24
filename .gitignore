@@ -1,0 +1,13 @@
+.vs
+bin/
+obj/
+Properties/
+*.config
+*.csproj
+*.sln
+
+*.pptx
+*.pdf
+*.jpg
+*.png
+*.txt
