@@ -73,5 +73,40 @@ namespace ConsoleApp1
             get => timeCount;
             set => timeCount = value;
         }
+
+        private Phone (string surname, int cardNumber)
+        {
+            this.surname = surname;
+            this.nameData = (null, null);
+            this.adress = null;
+            this.cardNumber = cardNumber;
+            this.incomeOutcome = (0, 0);
+            this.timeCount = (0, 0);
+        }
+
+        public Phone()
+        {
+            this.surname = null;
+            this.nameData = (null, null);
+            this.adress = null;
+            this.cardNumber = null;
+            this.incomeOutcome = (0, 0);
+            this.timeCount = (0, 0);
+        }
+
+        public Phone(string surname = null, string name = null, string middleName = null, string adress = null, int? cardNumber = null, int income = 0, int outcome = 0, int urbanTime = 0, int internationalTime = 0)
+        {
+            Surname = surname;
+            NameData = (name, middleName);
+            Adress = adress;
+            CardNumber = cardNumber;
+            IncomeOutcome = (income, outcome);
+            TimeCount = (urbanTime, internationalTime);
+        }
+
+        static Phone()
+        {
+            Console.WriteLine("Это статический конструктор!");
+        }
     }
 }
