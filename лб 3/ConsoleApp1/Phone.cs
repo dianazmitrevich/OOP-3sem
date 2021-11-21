@@ -124,7 +124,8 @@ namespace ConsoleApp1
 
         public static Phone[] highUrbanTime(ref Phone[] array, int mins)
         {
-            return array.Where(element => element.timeCount.urbanTime > mins).ToArray();
+            //return array.Where(element => element.timeCount.urbanTime > mins).ToArray();
+            return array.Where(element => element.incomeOutcome.income > 1000).ToArray();
         }
 
         public static Phone[] useInternationalTime(ref Phone[] array)
