@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Set labaSet1 = new Set(new[] { 6, 1, 24, 0, 5 });
+            Set labaSet1 = new Set(new[] { 6, 1, 24, 0, -5 });
             Set labaSet2 = new Set(new[] { 999, 1, 24, 4, 8 });
 
             Console.WriteLine("> - проверка на принадлежность = {0}", labaSet1 > 5);
@@ -24,6 +24,9 @@ namespace ConsoleApp1
             Console.WriteLine("Сумма = {0}", labaSet1.Summa());
             Console.WriteLine("Разница между максимальным и минимальным = {0}", labaSet1.Difference());
             Console.WriteLine("Количество = {0}", labaSet1.Amount());
+            Console.WriteLine("Первое число в строке = {0}", labaSet1.FirstNum());
+            Console.WriteLine("Без положительных элементов = {0}", labaSet1.DeletePositiveNums());
+
 
             Console.ReadKey();
         }

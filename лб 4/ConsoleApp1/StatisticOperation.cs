@@ -22,5 +22,30 @@ namespace ConsoleApp1
         {
             return labaSet.set.Length;
         }
+
+        // методы расширения
+        // выделение первого числа, содержащегося в строке
+        public static string FirstNum(this Set labaSet)
+        {
+            string result = "";
+            result += labaSet.set[0];
+
+            return result;
+        }
+
+        // удаление положительных элементов из множества
+        public static string DeletePositiveNums(this Set labaSet)
+        {
+            string result = "";
+            for (int i = 0; i < labaSet.set.Length; i++)
+            {
+                if (labaSet.set[i] < 0)
+                {
+                    result += labaSet.set[i];
+                    result += " ";
+                }
+            }
+            return result;
+        }
     }
 }
