@@ -21,6 +21,9 @@ namespace ConsoleApp1
                 Console.Write(s + " ");
 
             Console.WriteLine("\n< - проверка на подмножество = {0}", labaSet1 < labaSet2);
+            Console.WriteLine("Сумма = {0}", labaSet1.Summa());
+            Console.WriteLine("Разница между максимальным и минимальным = {0}", labaSet1.Difference());
+            Console.WriteLine("Количество = {0}", labaSet1.Amount());
 
             Console.ReadKey();
         }
