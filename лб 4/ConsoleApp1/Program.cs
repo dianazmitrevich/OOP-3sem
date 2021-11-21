@@ -10,6 +10,10 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Set labaSet1 = new Set(new[] { 1, 2, 3, 4, 5 });
+            Set labaSet2 = new Set(new[] { 999, 1, 24, 6, 8 });
+
+            Console.ReadKey();
         }
     }
 }
