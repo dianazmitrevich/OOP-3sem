@@ -35,5 +35,10 @@ namespace ConsoleApp1.Types
                 this.AgeRange = ageRange;
             else Console.WriteLine("Age range can't be less than 0");
         }
+
+        public override string ToString()
+        {
+            return $"This news episode goes for {this.Duration} minutes \nAge limit is {this.AgeRange} and above years \nNews category is {this.category}";
+        }
     }
 }

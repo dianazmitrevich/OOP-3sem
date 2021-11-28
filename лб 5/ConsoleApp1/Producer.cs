@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     public abstract class Producer
     {
-        public string filmGenre = "";
+        public string name = "";
         protected bool isFilmInCharts = true;
 
         public bool IsFilmInCharts
@@ -16,9 +16,9 @@ namespace ConsoleApp1
             get => this.isFilmInCharts;
         }
 
-        public Producer(string filmGenre = "", bool isFilmInCharts = true)
+        public Producer(string name = "", bool isFilmInCharts = true)
         {
-            this.filmGenre = filmGenre;
+            this.name = name;
             this.isFilmInCharts = isFilmInCharts;
         }
 
