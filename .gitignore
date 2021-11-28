@@ -5,6 +5,7 @@ Properties/
 *.config
 *.csproj
 *.sln
+*.csproj.user
 
 *.pptx
 *.pdf
