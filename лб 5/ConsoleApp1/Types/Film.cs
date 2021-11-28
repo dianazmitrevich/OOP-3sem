@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Types
 {
-    public class Film : TelevisionProgram, IProgram
+    public class Film : TelevisionProgram, showInfo
     {
         public string name;
 
@@ -19,10 +19,8 @@ namespace ConsoleApp1.Types
             }
         }
 
-        public Film(string name)
-        {
-            this.Name = name;
-        }
+        public Film(int duration, int ageRange, string name) : base(duration, ageRange, name) { }
+
         public void showDuration()
         {
             double _hours = duration / 60;

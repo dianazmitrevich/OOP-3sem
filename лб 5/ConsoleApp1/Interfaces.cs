@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    interface IProgram
+    interface showInfo
     {
         void showDuration();
         void editAgeRange(int ageRange);
     }
+
+    /* interface IHudFilm
+    {
+        void showDuration();
+    }
+
+    interface IMult
+    {
+        void showEpisodeNum();
+    } */
 }

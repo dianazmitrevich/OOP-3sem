@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Producers
 {
-    class Romanenko : Producer
+    class Popular : Producer
     {
-        public Romanenko(string name = "", string workingHours = "") : base(name, workingHours) { }
+        public Popular(string name = "", string workingHours = "") : base(name, workingHours) { }
 
         public override void retireTheProducer()
         {

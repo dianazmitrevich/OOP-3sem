@@ -14,8 +14,8 @@ namespace ConsoleApp1
         // Мультфильм, Реклама, Режиссер
 
         // constructors
-        private int duration;
-        private int ageRange;
+        public int duration;
+        public int ageRange;
         private string producer;
 
         public int Duration
