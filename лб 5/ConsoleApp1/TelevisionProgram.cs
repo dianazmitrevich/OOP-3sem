@@ -13,19 +13,17 @@ namespace ConsoleApp1
         // Телевизионная программа, Фильм, Новости, Худ. фильм,
         // Мультфильм, Реклама, Режиссер
 
-        // constructors
-        public int duration;
-        public int ageRange;
-        private string producer;
+        private int duration;
+        private int ageRange;
 
         public int Duration
         {
             get => duration;
             set
             {
-                if (duration > 0)
-                    this.Duration = duration;
-                else throw new Exception("Duration can't be less than 0");
+                if (value >= 0)
+                    duration = value;
+                else Console.WriteLine("Duration can't be less than 0");
             }
         }
 
@@ -34,26 +32,16 @@ namespace ConsoleApp1
             get => ageRange;
             set
             {
-                if (ageRange > 0)
-                    this.AgeRange = ageRange;
-                else throw new Exception("Age range can't be less than 0");
+                if (value >= 0)
+                    ageRange = value;
+                else Console.WriteLine("Age range can't be less than 0");
             }
         }
 
-        public string Producer
-        {
-            get => producer;
-            set
-            {
-                this.Producer = producer;
-            }
-        }
-
-        public TelevisionProgram(int duration = 0, int ageRange = 0, string producer = "")
+        public TelevisionProgram(int duration = 0, int ageRange = 0)
         {
             this.Duration = duration;
             this.AgeRange = ageRange;
-            this.Producer = producer;
         }
     }
 }

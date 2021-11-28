@@ -6,39 +6,43 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Types
 {
-    public abstract class Film : TelevisionProgram, showInfo
+    public sealed class Film : TelevisionProgram, showInfo
     {
-        public string name;
+        public string name = "";
+        public double rating = 0;
+        public int feesCost = 0;
 
-        public string Name
+        public Film()
         {
-            get => this.Name;
-            set
-            {
-                this.Name = name;
-            }
+            this.Duration = 0;
+            this.AgeRange = 0;
+            this.name = "";
+            this.rating = 0;
+            this.feesCost = 0;
         }
 
-        public Film(int duration, int ageRange, string name) : base(duration, ageRange, name) { }
+        public Film(int duration, int ageRange, string name, double rating) : base(duration)
+        {
+            this.Duration = duration;
+            this.AgeRange = ageRange;
+            this.name = name;
+            this.rating = rating;
+        }
 
         public void showDuration()
         {
-            double _hours = duration / 60;
+            double _hours = Duration / 60;
             double hours = Math.Floor(_hours);
-            double minutes = duration - (60 * hours);
+            double minutes = Duration - (60 * hours);
 
-            Console.WriteLine("{0} film goes for {1} hours and {2} minutes", name, (int)hours, (int)minutes);
+            Console.WriteLine("{0} film goes for {1} hours and {2} minutes", this.name, (int)hours, (int)minutes);
         }
+
         public void editAgeRange(int ageRange = 0)
         {
             if (ageRange > 0)
                 this.AgeRange = ageRange;
-            else throw new Exception("Age range can't be less than 0");
-        }
-
-        public virtual string classNameString()
-        {
-            return "Film";
+            else Console.WriteLine("Age range can't be less than 0");
         }
     }
 }

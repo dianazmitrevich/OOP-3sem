@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Types
 {
+    /*
     public abstract News : TelevisionProgram, showInfo
     {
         public News(int duration, int ageRange, string name) : base(duration, ageRange, name) { }
@@ -24,5 +25,5 @@ namespace ConsoleApp1.Types
         {
             return "News";
         }
-    }
+    }*/
 }
