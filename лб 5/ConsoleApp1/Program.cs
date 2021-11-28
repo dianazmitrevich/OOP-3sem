@@ -12,7 +12,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Film Scarface = new Film(170, 8, "Scarface", 7.9);
-            Console.WriteLine(Scarface);
+            Console.WriteLine();
 
             Console.ReadKey();
         }

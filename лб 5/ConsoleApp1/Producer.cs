@@ -23,5 +23,10 @@ namespace ConsoleApp1
         }
 
         public abstract void filmIsNotInCharts();
+
+        public virtual string getString()
+        {
+            return "Virtual method for Producer class";
+        }
     }
 }

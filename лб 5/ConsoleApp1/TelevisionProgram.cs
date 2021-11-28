@@ -43,5 +43,29 @@ namespace ConsoleApp1
             this.Duration = duration;
             this.AgeRange = ageRange;
         }
+
+        public virtual string getString()
+        {
+            return "Virtual method for TelevisionProgram class";
+        }
+
+        public override int GetHashCode()
+        {
+            double hashCode = this.duration * this.ageRange / 24;
+            return ((int)Math.Floor(hashCode));
+        }
+
+        public override bool Equals(object obj)
+        {
+            TelevisionProgram objectName = obj as TelevisionProgram;
+            if (this.duration == objectName.duration)
+                return true;
+            else return false;
+        }
+
+        public override string ToString()
+        {
+            return $"Duration = {this.duration},\n Age range = {this.ageRange}";
+        }
     }
 }
