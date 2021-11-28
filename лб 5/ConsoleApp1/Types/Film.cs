@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Types
 {
-    public sealed class Film : TelevisionProgram, showInfo
+    public abstract class Film : TelevisionProgram, showInfo
     {
         public string name;
 

@@ -14,6 +14,7 @@ namespace ConsoleApp1.Types
         {
             Console.WriteLine("Ad goes for {0} minutes", duration);
         }
+
         public void editAgeRange(int ageRange = 0)
         {
             Console.WriteLine("This ad has no age limit!");
