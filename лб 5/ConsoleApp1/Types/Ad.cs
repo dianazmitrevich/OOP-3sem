@@ -18,5 +18,10 @@ namespace ConsoleApp1.Types
         {
             Console.WriteLine("This ad has no age limit!");
         }
+
+        public virtual string classNameString()
+        {
+            return "Ad";
+        }
     }
 }

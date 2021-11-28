@@ -18,5 +18,10 @@ namespace ConsoleApp1
         {
             Console.WriteLine("This episode has no age limit!");
         }
+
+        public virtual string classNameString()
+        {
+            return "News";
+        }
     }
 }

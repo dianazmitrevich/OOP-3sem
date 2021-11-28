@@ -35,5 +35,10 @@ namespace ConsoleApp1.Types
                 this.AgeRange = ageRange;
             else throw new Exception("Age range can't be less than 0");
         }
+
+        public virtual string classNameString()
+        {
+            return "Film";
+        }
     }
 }
