@@ -6,25 +6,17 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class TelevisionProgram
+    public abstract class TelevisionProgram
     {
         // Вариант 8
 
         // Телевизионная программа, Фильм, Новости, Худ. фильм,
         // Мультфильм, Реклама, Режиссер
 
-        public int duration;
-        public int ageRange;
-        public string producer;
-
-        public string Producer
-        {
-            get => this.producer;
-            set
-            {
-                this.Producer = producer;
-            }
-        }
+        // constructors
+        private int duration;
+        private int ageRange;
+        private string producer;
 
         public int Duration
         {
@@ -48,10 +40,20 @@ namespace ConsoleApp1
             }
         }
 
-        public TelevisionProgram(int duration = 0, int ageRange = 0)
+        public string Producer
+        {
+            get => producer;
+            set
+            {
+                this.Producer = producer;
+            }
+        }
+
+        public TelevisionProgram(int duration = 0, int ageRange = 0, string producer = "")
         {
             this.Duration = duration;
             this.AgeRange = ageRange;
+            this.Producer = producer;
         }
     }
 }

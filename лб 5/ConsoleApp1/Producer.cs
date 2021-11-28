@@ -14,7 +14,14 @@ namespace ConsoleApp1
 
         public bool IsWorkingYet
         {
-            get => this.IsWorkingYet;
+            get => this.isWorkingYet;
+        }
+
+        public Producer(string Name = "", string WorkingHours = "", bool IsWorkingYet = true)
+        {
+            this.name = Name;
+            this.workingHours = WorkingHours;
+            this.isWorkingYet = IsWorkingYet;
         }
 
         public abstract void retireTheProducer();
