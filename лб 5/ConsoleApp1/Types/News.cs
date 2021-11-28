@@ -6,24 +6,34 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Types
 {
-    /*
-    public abstract News : TelevisionProgram, showInfo
+    public class News : TelevisionProgram, showInfo
     {
-        public News(int duration, int ageRange, string name) : base(duration, ageRange, name) { }
+        public string category = "";
+
+        public News()
+        {
+            this.Duration = 0;
+            this.AgeRange = 0;
+            this.category = "";
+        }
+
+        public News(int duration, int ageRange, string category) : base(duration)
+        {
+            this.Duration = duration;
+            this.AgeRange = ageRange;
+            this.category = category;
+        }
 
         public void showDuration()
         {
-            Console.WriteLine("Episode goes for {0} minutes", duration);
+            Console.WriteLine("This news episode goes for {0} minutes", Duration);
         }
 
         public void editAgeRange(int ageRange = 0)
         {
-            Console.WriteLine("This episode has no age limit!");
+            if (ageRange > 0)
+                this.AgeRange = ageRange;
+            else Console.WriteLine("Age range can't be less than 0");
         }
-
-        public virtual string classNameString()
-        {
-            return "News";
-        }
-    }*/
+    }
 }

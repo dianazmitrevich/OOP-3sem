@@ -8,22 +8,20 @@ namespace ConsoleApp1
 {
     public abstract class Producer
     {
-        public string name = "";
-        public string workingHours = "";
-        protected bool isWorkingYet = true;
+        public string filmGenre = "";
+        protected bool isFilmInCharts = true;
 
-        public bool IsWorkingYet
+        public bool IsFilmInCharts
         {
-            get => this.isWorkingYet;
+            get => this.isFilmInCharts;
         }
 
-        public Producer(string Name = "", string WorkingHours = "", bool IsWorkingYet = true)
+        public Producer(string filmGenre = "", bool isFilmInCharts = true)
         {
-            this.name = Name;
-            this.workingHours = WorkingHours;
-            this.isWorkingYet = IsWorkingYet;
+            this.filmGenre = filmGenre;
+            this.isFilmInCharts = isFilmInCharts;
         }
 
-        public abstract void retireTheProducer();
+        public abstract void filmIsNotInCharts();
     }
 }
