@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Types
 {
-    public class Ad : TelevisionProgram, showInfo
+    public sealed class Ad : TelevisionProgram, showInfo
     {
         public Ad(int duration, int ageRange, string name) : base(duration, ageRange, name) { }
 
@@ -17,11 +17,6 @@ namespace ConsoleApp1.Types
         public void editAgeRange(int ageRange = 0)
         {
             Console.WriteLine("This ad has no age limit!");
-        }
-
-        public virtual string classNameString()
-        {
-            return "Ad";
         }
     }
 }
