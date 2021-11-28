@@ -9,6 +9,6 @@ namespace ConsoleApp1
     interface IProgram
     {
         void showDuration();
-        void editAgeRAnge();
+        void editAgeRange(int ageRange);
     }
 }
