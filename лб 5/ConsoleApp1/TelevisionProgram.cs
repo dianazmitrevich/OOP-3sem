@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class TelevisionProgram
+    public class TelevisionProgram
     {
         // Вариант 8
 
         // Телевизионная программа, Фильм, Новости, Худ. фильм,
         // Мультфильм, Реклама, Режиссер
+
+        public int duration;
+        public int ageRange;
+        public Producer producer;
     }
 }

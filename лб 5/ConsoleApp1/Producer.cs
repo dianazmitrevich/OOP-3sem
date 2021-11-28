@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    interface IProgram
+    public abstract class Producer
     {
-        void showDuration();
-        void editAgeRAnge();
     }
 }
