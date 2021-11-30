@@ -12,11 +12,12 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Film Scarface = new Film(170, 8, "Scarface", 8.7);
+            var a = Scarface;
             News WorkPlace = new News(5, 8, "Employment");
             Ad IPhone13Promotion = new Ad(3, 8, "Mobile phones");
 
             Printer printer = new Printer();
-            printer.IAmPrinting(Scarface);
+            printer.IAmPrinting(a);
 
             Console.ReadKey();
         }
