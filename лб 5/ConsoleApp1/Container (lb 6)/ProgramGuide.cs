@@ -8,11 +8,6 @@ namespace ConsoleApp1.Container__lb_6_
 {
     public class ProgramGuide
     {
-        // Создать Программу передач.
-        // Найти все фильмы, снятые в определенный год (с рейтингом более 5), подсчитать
-        // продолжительность программы по времени, число
-        // рекламных роликов.
-
         public object[] programArray;
 
         public ProgramGuide(params object[] array)
