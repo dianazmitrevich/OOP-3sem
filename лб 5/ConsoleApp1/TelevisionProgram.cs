@@ -9,11 +9,11 @@ namespace ConsoleApp1
     public abstract class TelevisionProgram
     {
         // Вариант 8
-
+        
         // Телевизионная программа, Фильм, Новости, Худ. фильм,
         // Мультфильм, Реклама, Режиссер
 
-        private int duration;
+        public int duration;
         private int ageRange;
 
         public int Duration

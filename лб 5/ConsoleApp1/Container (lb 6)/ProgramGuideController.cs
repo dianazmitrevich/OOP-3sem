@@ -32,7 +32,7 @@ namespace ConsoleApp1.Container__lb_6_
 
         public void programGuideDuration(ProgramGuide programGuide)
         {
-            Console.WriteLine("Program guide duration is ");
+            Console.Write("Program guide duration is ");
 
             int duration = 0;
             for (int i = 0; i < programGuide.programArray.Length; i++)
@@ -40,15 +40,15 @@ namespace ConsoleApp1.Container__lb_6_
                 if (programGuide.programArray[i] is TelevisionProgram)
                 {
                     TelevisionProgram tvprogram = programGuide.programArray[i] as TelevisionProgram;
-                    duration += tvprogram.Duration;
+                    duration += tvprogram.duration;
                 }
             }
-            Console.WriteLine("minutes!");
+            Console.WriteLine($"{duration} minutes!");
         }
 
         public void adNumber(ProgramGuide programGuide)
         {
-            Console.WriteLine("Ad number is ");
+            Console.Write("Ad number is ");
 
             int number = 0;
             for (int i = 0; i < programGuide.programArray.Length; i++)
@@ -56,6 +56,7 @@ namespace ConsoleApp1.Container__lb_6_
                 if (programGuide.programArray[i] is Ad)
                     number++;
             }
+            Console.WriteLine(number);
         }
     }
 }
