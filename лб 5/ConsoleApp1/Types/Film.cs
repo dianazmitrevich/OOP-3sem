@@ -11,7 +11,43 @@ namespace ConsoleApp1.Types
     {
         public string name = "";
         public double rating = 0;
-        public int feesCost = 0;
+        public Fees feesCost;
+
+        public struct Fees
+        {
+            public int dollars;
+            public int cents;
+
+            public Fees(int dollars = 0, int cents = 0)
+            {
+                this.dollars = dollars;
+                this.cents = cents;
+            }
+
+            public void showFees()
+            {
+                Console.WriteLine($"Fees are {this.dollars} dollars {this.cents} cents!");
+            }
+        }
+
+        /*
+        enum FilmInfo
+        {
+            name,
+            rating
+        }
+
+        void showFilmInfo(Film film, FilmInfo filmInfo)
+        {
+            string result = filmInfo switch
+            {
+                FilmInfo.name => ${film.name},
+                FilmInfo.rating => ${film.rating}
+            }
+
+            Console.WriteLine(result);
+        }
+        */
 
         public Film()
         {
@@ -19,7 +55,7 @@ namespace ConsoleApp1.Types
             this.AgeRange = 0;
             this.name = "";
             this.rating = 0;
-            this.feesCost = 0;
+            this.feesCost = new Fees();
         }
 
         public Film(int duration, int ageRange, string name, double rating) : base(duration)
