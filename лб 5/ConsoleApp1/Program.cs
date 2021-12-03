@@ -19,21 +19,19 @@ namespace ConsoleApp1
                 Film Scarface = new Film(170, 8, "Scarface", 8.7);
                 Film IceAge = new Film(140, 8, "IceAge", 5.2);
                 Film Twilight = new Film(150, 8, "Twilight", 4);
-
-                Film exceptionFilm = new Film(1, 9, "exceptionFilm", 4);
-
-                //Film exceptionFilm_ = new Film(1, -9, "exceptionFilm_", 4); // ExceptionTP
-
-                //exceptionFilm.editAgeRange(-20); // ExceptionF
-                var b = exceptionFilm;
-                Printer printer = new Printer();
-                printer.IAmPrinting(b);
-
                 News WorkPlace = new News(5, 8, "Employment");
                 Ad IPhone13Promotion = new Ad(3, 8, "Mobile phones");
                 Ad IPhone12Promotion = new Ad(5, 8, "Mobile phones");
 
-                Console.WriteLine("\n");
+                Film exceptionFilm = new Film(1, 9, "exceptionFilm", 4);
+
+                //Film exceptionFilm_ = new Film(1, -9, "exceptionFilm_", 4); // ExceptionTP
+                //exceptionFilm.editAgeRange(-20); // ExceptionF
+
+                var b = IceAge;
+                Printer printer = new Printer();
+                printer.IAmPrinting(b);
+                Console.WriteLine();
 
                 ProgramGuide programGuide = new ProgramGuide(Scarface, IceAge, Twilight, IPhone12Promotion, IPhone13Promotion);
                 ProgramGuideController programGuideController = new ProgramGuideController();

@@ -93,7 +93,7 @@ namespace ConsoleApp1.Types
 
         public override string ToString()
         {
-            return $"{this.name} film goes for {this.Duration} minutes \nAge limit is {this.AgeRange} and above years \nHighest rating found in Google is {this.rating} / 10\nProducer - {this.producerName}";
+            return $"{this.name} film goes for {this.Duration} minutes \nAge limit is {this.AgeRange} and above years \nHighest rating found on Google is {this.rating} / 10\nProducer - {this.producerName}";
         }
     }
 }

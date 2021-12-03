@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleApp1.Interfaces;
+using ConsoleApp1.Exceptions__lb_7_;
 
 namespace ConsoleApp1.Types
 {
@@ -18,7 +19,7 @@ namespace ConsoleApp1.Types
         {
             if (ageRange > 0)
                 this.AgeRange = ageRange;
-            else Console.WriteLine("Age range can't be less than 0");
+            else throw new ExceptionF("NewsPartial.cs", "Age range can't be less than 0");
         }
 
         public void setProducer(string producerName = "")
