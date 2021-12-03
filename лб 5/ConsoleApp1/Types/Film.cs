@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleApp1.Exceptions__lb_7_;
+using ConsoleApp1.Interfaces;
 
 namespace ConsoleApp1.Types
-
 {
-    public sealed class Film : TelevisionProgram, showInfo
+    public class Film : TelevisionProgram, IShowInfo, IProducer
     {
         public string name = "";
         public double rating = 0;
+        public string producerName = "";
         public Fees feesCost;
 
         public struct Fees
@@ -55,6 +57,7 @@ namespace ConsoleApp1.Types
             this.AgeRange = 0;
             this.name = "";
             this.rating = 0;
+            this.producerName = "";
             this.feesCost = new Fees();
         }
 
@@ -64,6 +67,7 @@ namespace ConsoleApp1.Types
             this.AgeRange = ageRange;
             this.name = name;
             this.rating = rating;
+            this.producerName = "No info on producer";
         }
 
         public void showDuration()
@@ -79,12 +83,17 @@ namespace ConsoleApp1.Types
         {
             if (ageRange > 0)
                 this.AgeRange = ageRange;
-            else Console.WriteLine("Age range can't be less than 0");
+            else throw new ExceptionF("Film.cs", "Age range can't be less than 0");
+        }
+
+        public void setProducer(string producerName = "")
+        {
+            this.producerName = producerName;
         }
 
         public override string ToString()
         {
-            return $"{this.name} film goes for {this.Duration} minutes \nAge limit is {this.AgeRange} and above years \nHighest rating found in Google is {this.rating} / 10";
+            return $"{this.name} film goes for {this.Duration} minutes \nAge limit is {this.AgeRange} and above years \nHighest rating found in Google is {this.rating} / 10\nProducer - {this.producerName}";
         }
     }
 }

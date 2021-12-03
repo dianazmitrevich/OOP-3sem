@@ -4,21 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApp1.Interfaces
 {
-    interface showInfo
+    interface IShowInfo
     {
         void showDuration();
         void editAgeRange(int ageRange);
     }
-
-    /* interface IHudFilm
-    {
-        void showDuration();
-    }
-
-    interface IMult
-    {
-        void showEpisodeNum();
-    } */
 }

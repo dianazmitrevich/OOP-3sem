@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleApp1.Exceptions__lb_7_;
 
 namespace ConsoleApp1
 {
@@ -23,7 +24,7 @@ namespace ConsoleApp1
             {
                 if (value >= 0)
                     duration = value;
-                else Console.WriteLine("Duration can't be less than 0");
+                else throw new ExceptionTP("TelevisionProgram.cs", "Duration can't be less than 0");
             }
         }
 
@@ -34,7 +35,7 @@ namespace ConsoleApp1
             {
                 if (value >= 0)
                     ageRange = value;
-                else Console.WriteLine("Age range can't be less than 0");
+                else throw new ExceptionTP("TelevisionProgram.cs", "Age range can't be less than 0");
             }
         }
 

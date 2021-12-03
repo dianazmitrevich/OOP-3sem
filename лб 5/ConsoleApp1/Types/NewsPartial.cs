@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleApp1.Interfaces;
 
 namespace ConsoleApp1.Types
 {
-    public partial class News : TelevisionProgram, showInfo
+    public partial class News : TelevisionProgram, IShowInfo, IProducer
     {
         public void showDuration()
         {
@@ -20,9 +21,14 @@ namespace ConsoleApp1.Types
             else Console.WriteLine("Age range can't be less than 0");
         }
 
+        public void setProducer(string producerName = "")
+        {
+            this.producerName = producerName;
+        }
+
         public override string ToString()
         {
-            return $"This news episode goes for {this.Duration} minutes \nAge limit is {this.AgeRange} and above years \nNews category is {this.category}";
+            return $"This news episode goes for {this.Duration} minutes \nAge limit is {this.AgeRange} and above years \nNews category is {this.category}\nProducer - {this.producerName}";
         }
     }
 }

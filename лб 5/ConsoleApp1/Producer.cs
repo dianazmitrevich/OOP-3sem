@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+    /*
     public abstract class Producer
     {
         public string name = "";
@@ -29,4 +30,5 @@ namespace ConsoleApp1
             return "Virtual method for Producer class";
         }
     }
+    */
 }
