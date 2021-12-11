@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Set<T> : Interface<T> where T : class
+    public class Set<T> : Interface<T>
     {
         public T[] set;
         private IEnumerable<int> result;
@@ -75,7 +75,7 @@ namespace ConsoleApp1
         public void Show()
         {
             foreach (T element in this.set)
-                Console.Write($"{element} ");
+                Console.Write($"{element}");
         }
     }
 }
