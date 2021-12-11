@@ -25,12 +25,12 @@ namespace ConsoleApp1
 
                 Film exceptionFilm = new Film(1, 9, "exceptionFilm", 4);
 
-                //Film exceptionFilm_ = new Film(1, -9, "exceptionFilm_", 4); // ExceptionTP
-                //exceptionFilm.editAgeRange(-20); // ExceptionF
+                // Film exceptionFilm_ = new Film(1, -9, "exceptionFilm_", 4); // ExceptionTP
+                // exceptionFilm.editAgeRange(-20); // ExceptionF
 
-                var b = IceAge;
+                //var b = IceAge;
                 Printer printer = new Printer();
-                printer.IAmPrinting(b);
+                printer.IAmPrinting(IceAge);
                 Console.WriteLine();
 
                 ProgramGuide programGuide = new ProgramGuide(Scarface, IceAge, Twilight, IPhone12Promotion, IPhone13Promotion);
@@ -42,7 +42,6 @@ namespace ConsoleApp1
                 // int[] aa = null;
                 // Debug.Assert(aa != null, "Values array cannot be null");
             }
-
 
             catch (ExceptionTP ex)
             {
