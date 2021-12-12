@@ -24,10 +24,17 @@ namespace ConsoleApp1
             PersonWill.Upgrade(5);
             PersonWill.TurnOnEvent += StrainMaxCapacity;
             PersonWill.TurnOn(10.7);
+
+            Console.WriteLine("\nPersonWill:");
+            PersonWill.showCurrentLevel();
+            PersonWill.showCurrentStrain();
             Console.WriteLine();
 
             RobotWill.Upgrade(19);
             RobotWill.TurnOn(17.23);
+            Console.WriteLine("\nRobotWill:");
+            RobotWill.showCurrentLevel();
+            RobotWill.showCurrentStrain();
 
             Console.ReadKey();
         }
@@ -36,9 +43,15 @@ namespace ConsoleApp1
         private static void StrainMaxCapacity(Boss machine, double currentStrain)
         {
             if (machine.Type == "person" && currentStrain > 9.5)
+            {
                 Console.WriteLine($"{machine.Name} broke under this strain while trying to turn on!");
+                machine.Status = false; machine.Strain = 0;
+            }
             else if (machine.Type == "robot" && currentStrain > 24.2)
+            {
                 Console.WriteLine($"{machine.Name} broke under this strain while trying to turn on!");
+                machine.Status = false; machine.Strain = 0;
+            }
         }
     }
 }

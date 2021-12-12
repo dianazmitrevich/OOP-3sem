@@ -22,13 +22,15 @@ namespace ConsoleApp1
         public string Type { get; }
         public int Level { get; set; }
         public double Strain { get; set; }
+        public bool Status { get; set; }
 
-        public Boss(string name = "", string type = "", int level = 0, double strain = 0.0)
+        public Boss(string name = "", string type = "", int level = 0, double strain = 0.0, bool status = true)
         {
             this.Name = name;
             this.Type = type;
             this.Level = level;
             this.Strain = strain;
+            this.Status = status;
         }
 
         public delegate void UpgradeLevel(Boss machine, int upgradeTo);
@@ -47,5 +49,8 @@ namespace ConsoleApp1
             this.Strain = currentStrain;
             this.TurnOnEvent?.Invoke(this, currentStrain);
         }
+
+        public void showCurrentLevel() => Console.WriteLine($"Current level is {this.Level}");
+        public void showCurrentStrain() => Console.WriteLine($"Current strain is {this.Strain}");
     }
 }
