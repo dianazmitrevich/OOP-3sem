@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace ConsoleApp1
 {
@@ -52,5 +53,11 @@ namespace ConsoleApp1
 
         public void showCurrentLevel() => Console.WriteLine($"Current level is {this.Level}");
         public void showCurrentStrain() => Console.WriteLine($"Current strain is {this.Strain}");
+
+        public static string DeletePunctuation(string str) => Regex.Replace(str, @"[.|,|;|:]", "");
+        public static string AddSymbol(string str) => str.Insert(0, " ").ToString();
+        public static string ToUpperCase(string str) => str.ToUpper();
+        public static string DeleteSpaces(string str) => Regex.Replace(str.Trim(), @"\s+", " ");
+        public static string DeleteWordNot(string str) => Regex.Replace(str, @"NOT\w*", "");
     }
 }

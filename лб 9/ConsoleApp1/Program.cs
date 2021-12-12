@@ -36,6 +36,25 @@ namespace ConsoleApp1
             RobotWill.showCurrentLevel();
             RobotWill.showCurrentStrain();
 
+            string notEditedString = "n;Ot     ed,iT.ed   St:rING  ";
+            Action<string> EditedString = (str) => Console.WriteLine(str);
+            Func<string, string> stringMethods = Boss.DeletePunctuation; // спросить про string
+
+            Console.WriteLine($"\nNot edited string is '{notEditedString}'");
+            EditedString(notEditedString = stringMethods(notEditedString));
+
+            stringMethods += Boss.AddSymbol;
+            EditedString(notEditedString = stringMethods(notEditedString));
+
+            stringMethods += Boss.ToUpperCase;
+            EditedString(notEditedString = stringMethods(notEditedString));
+
+            stringMethods += Boss.DeleteSpaces;
+            EditedString(notEditedString = stringMethods(notEditedString));
+
+            stringMethods += Boss.DeleteWordNot;
+            EditedString(notEditedString = stringMethods(notEditedString));
+
             Console.ReadKey();
         }
 
