@@ -38,7 +38,7 @@ namespace ConsoleApp1
 
             string notEditedString = "n;Ot     ed,iT.ed   St:rING  ";
             Action<string> EditedString = (str) => Console.WriteLine(str);
-            Func<string, string> stringMethods = Boss.DeletePunctuation; // спросить про string
+            Func<string, string> stringMethods = Boss.DeletePunctuation;
 
             Console.WriteLine($"\nNot edited string is '{notEditedString}'");
             EditedString(notEditedString = stringMethods(notEditedString));

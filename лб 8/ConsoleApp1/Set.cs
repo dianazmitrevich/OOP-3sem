@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Set<T> : Interface<T>
+    public class Set<T> : Interface<T> // where T : struct (для значимых типов) // class (для ссылочных типов)
     {
         public T[] set;
         private IEnumerable<int> result;
